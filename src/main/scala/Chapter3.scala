@@ -14,6 +14,7 @@ object Chapter3 {
     println(swap2(Array(1, 2, 3, 4, 5, 6)))
     println(swap3(Array(1, -2, 3, 4, -5, -6, 0)))
     println(avg(Array(1.0d, 2.0d, 3.0d, 4.0d): _*))
+    val matrix = Array.ofDim[Double](3,4)
   }
 
   def arrayBufferTest(): Unit = {

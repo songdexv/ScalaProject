@@ -16,7 +16,7 @@ object ImplicitTest {
   implicit def fractionToOrdered(fraction: Fraction): Ordered[Fraction] = {
     new Ordered[Fraction] {
       override def compare(that: Fraction): Int = {
-        val lcm: BigInt = (fraction.den * that.den).abs / fraction.den.gcd(that.den)
+        val lcm: Int = (fraction.den * that.den).abs / fraction.gcd(fraction.den,that.den)
         val n1 = fraction.num * (lcm / fraction.den)
         val n2 = that.num * (lcm / that.den)
         n1.compare(n2)
